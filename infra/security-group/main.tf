@@ -1,5 +1,5 @@
 variable "vpc-id" {}
-variable "public-subnet-cidr" {}
+//variable "public-subnet-cidr" {}
 output "security-group-for-python-id"{
    value =  aws_security_group.python-security-group.id
 }
