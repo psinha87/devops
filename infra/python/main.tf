@@ -14,7 +14,7 @@ resource "aws_instance" "python-terraform-server"{
     vpc_security_group_ids = var.security-group-for-python-id
     subnet_id = var.subnet-id
     associate_public_ip_address = var.enable-public-ip-address
-    user_data = "${file("./python/python-install.sh")}
+    user_data = "${file("./python/python-install.sh")}"
       metadata_options {
     http_endpoint = "enabled"  
     http_tokens   = "required" 
