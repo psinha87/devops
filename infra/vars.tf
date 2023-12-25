@@ -20,11 +20,11 @@ variable "ap-availability-zone" {
 }
 variable "ami-id"{
     type = string
-    default = "ami-01d565a5f2da42e6f"
+    default = "ami-04708942c263d8190"
 }
 variable "instance-type"{
     type = string
-    default = "t3.medium"
+    default = "t2.medium"
 }
 variable "enable-public-ip-address" {
     type = bool
