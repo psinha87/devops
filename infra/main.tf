@@ -40,7 +40,7 @@ module "load-balancer"{
 }
 module "rds-db-instance"{
     source = ".//rds-db-instance"
-    private-subnet-ids = module.networking.public-subnet-id
+    private-subnet-ids = tolist(module.networking.public-subnet-id)
     rds-security-group-ids = module.security-group.rds-security-group
     mysql_dbname = "devprojdb"
 }
