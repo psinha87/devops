@@ -35,7 +35,7 @@ module "load-balancer"{
     security-group-ssh-http = module.security-group.security-group-for-ssh-http
     subnet-id = module.networking.public-subnet-id
     target-group-arn = module.lb-target-group.target-group-arn
-    instance-id = module.jenkins.instance-id
+    instance-id = module.python.instance-id
     application-port = 5000
 }
 module "rds-db-instance"{
