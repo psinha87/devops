@@ -12,7 +12,7 @@ module "networking"{
 module "security-group"{
     source = ".//security-group"
     vpc-id = module.networking.project-vpc-id
-    public-subnet-cidr = module.networking.public-subnet-id
+    public-subnet-cidr = tolist(module.networking.public-subnet-id)
 }
 module "python" {
     source = ".//python"
