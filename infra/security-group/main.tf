@@ -35,7 +35,7 @@ resource "aws_security_group" "rds-security-group" {
     ingress {
         from_port = 3306
         to_port = 3306
-        cidr_blocks = [var.public-subnet-cidr]
+        cidr_blocks = var.public-subnet-cidr
         protocol = "tcp"
     }
     tags = {
