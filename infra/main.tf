@@ -25,7 +25,7 @@ module "python" {
     public-key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLN11osdLTzN6PHUwS4pgiGTm6fTIaeyRnzF1Cwj+mPlX0671iIvOc9wnVr5am78K+VGaWkamiYyRHF/OcR+ywtcUB1yfDiFlM2NPEMcEniOnkiOQDl6EZ6d+7JMVwjcRpHycLoWOsH6oZSNRCKK1rmfuk67nKRZdpka1EqLv3D/U3MxZaUbMmcE6sDizIc1wPCs+HQPap855U65TD+uNdveDHB4BnRjBJbBvMhCE4IxGrUXihflSPlerYj0MOQWbVnrPf6SmB1GF9+MKWV5jZKSHOg/Fqps2HLcgBVnpCwKG3BHCAz77ZBXRRMtH3lbDGX45xu9HaPyA+uPRHrpNB ec2-user@ip-172-31-28-160.eu-north-1.compute.internal"
 }
 module "lb-target-group"{
-    source = ".//lb-target-group"
+    source = ".//lb_target_group"
     instance-id = module.python.instance-id
     vpc-id = module.networking.project-vpc-id
 
