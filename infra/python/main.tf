@@ -16,8 +16,8 @@ resource "aws_instance" "python-terraform-server"{
     associate_public_ip_address = var.enable-public-ip-address
     user_data = "${file("./python/python-install.sh")}
       metadata_options {
-    http_endpoint = "enabled"  # Enable the IMDSv2 endpoint
-    http_tokens   = "required" # Require the use of IMDSv2 tokens
+    http_endpoint = "enabled"  
+    http_tokens   = "required" 
   }
   tags = {
     Name = "python-terraform-ec2"
