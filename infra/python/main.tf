@@ -10,7 +10,7 @@ output "instance-id" {
 resource "aws_instance" "python-terraform-server"{
     ami = var.ami-id
     instance_type = var.instance-type
-    key_name = "AWS"
+    key_name = "mykey"
     vpc_security_group_ids = var.security-group-for-python-id
     subnet_id = var.subnet-id
     associate_public_ip_address = var.enable-public-ip-address
@@ -25,6 +25,6 @@ resource "aws_instance" "python-terraform-server"{
    
 }
 resource "aws_key_pair" "public-key"{
-    key_name = "AWS"
+    key_name = "mykey"
     public_key = var.public-key
 }
