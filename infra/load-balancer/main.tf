@@ -18,7 +18,7 @@ resource "aws_lb_target_group_attachment" "lb-target-group-attachment"{
 }
 resource "aws_lb_listener" "python-listener"{
     load_balancer_arn = aws_lb.project-lb.arn
-    port = 80
+    port = 5000
     protocol = "HTTP"
     default_action {
         type = "forward"
