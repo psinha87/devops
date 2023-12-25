@@ -2,7 +2,7 @@ variable "vpc-cidr" {}
 variable "vpc-name" {}
 variable "cidr-public-subnet" {}
 variable "cidr-private-subnet" {}
-variable "eu-availability-zone" {}
+variable "ap-availability-zone" {}
 output "project-vpc-id"{
     value =  aws_vpc.project-vpc.id
 }
